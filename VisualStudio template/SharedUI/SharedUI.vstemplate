@@ -1,0 +1,49 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>$safeprojectname$</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>$safeprojectname$</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="SharedUI.csproj" ReplaceParameters="true">
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <Folder Name="css" TargetFolderName="css">
+          <Folder Name="bootstrap" TargetFolderName="bootstrap">
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css">bootstrap.min.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css.map">bootstrap.min.css.map</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="app.css">app.css</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="false" TargetFileName="favicon.png">favicon.png</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+      </Folder>
+      <Folder Name="Components" TargetFolderName="Components">
+        <Folder Name="Layout" TargetFolderName="Layout">
+          <ProjectItem ReplaceParameters="false" TargetFileName="MainLayout.razor">MainLayout.razor</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MainLayout.razor.css">MainLayout.razor.css</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="NavMenu.razor">NavMenu.razor</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NavMenu.razor.css">NavMenu.razor.css</ProjectItem>
+        </Folder>
+        <Folder Name="Pages" TargetFolderName="Pages">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Counter.razor">Counter.razor</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Error.razor">Error.razor</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Home.razor">Home.razor</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Weather.razor">Weather.razor</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="_Imports.razor">_Imports.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="App.razor">App.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Routes.razor">Routes.razor</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

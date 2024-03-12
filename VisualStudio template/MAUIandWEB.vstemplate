@@ -1,0 +1,29 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <DefaultName>MAIUandWEB</DefaultName>
+        <Name>MAUI Hybrid and Web Razor</Name>
+        <Description>A solution with shared razor UI components</Description>
+        <Icon>Icon.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+        <PlatformTag>android</PlatformTag>
+        <PlatformTag>ios</PlatformTag>
+        <PlatformTag>web</PlatformTag>
+        <PlatformTag>windows</PlatformTag>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+             <SolutionFolder Name="UI">
+                <ProjectTemplateLink ProjectName="$safeprojectname$App" CopyParameters="true">
+                    MAIUApp\MAUIApp.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$Web" CopyParameters="true">
+                    RazorWeb\RazorWeb.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$SharedUI" CopyParameters="true">
+                    SharedUI\SharedUI.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>

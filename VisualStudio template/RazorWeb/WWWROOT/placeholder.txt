@@ -1,0 +1,1 @@
+WebApplication.CreateBuilder(args) requires a wwwroot folder to exist: https://github.com/dotnet/aspnetcore/issues/38857
